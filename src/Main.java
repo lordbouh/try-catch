@@ -8,8 +8,7 @@ public class Main {
             }
     }
 private static boolean copyFileUsingStream(String source, String sourceEnc, String dest, String destEnc) {
-        Charset sEnc = null;
-        try (Reader fis = new InputStreamReader(new FileInputStream(source), Charset.forName(sourceEnc));
+         try (Reader fis = new InputStreamReader(new FileInputStream(source), Charset.forName(sourceEnc));
              Writer fos = new OutputStreamWriter(new FileOutputStream(dest), Charset.forName(destEnc))) {
                 /* все открылось, можно копировать */
 
